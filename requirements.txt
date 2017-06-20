@@ -1,0 +1,10 @@
+Login Page
+
+- Form Validation
+- Never Refresh
+- Log me in and remember the data when the page refresh on succesful log in
+- Needs to take in:
+    - username
+    - password
+    - remember me
+- Logout only shown when logged in
