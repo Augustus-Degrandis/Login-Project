@@ -1,9 +1,21 @@
-<html>
+<!DOCTYPE html>
     <head>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script src="Login.js"></script>
+        <link rel="stylesheet" href="Login.css">
     </head>
     <body>
-        <p>sup mang </p>
-        <p>bye mang </p>
-        <p>This is Awesome</p>
+        <button onclick="$('div.modal').show()">Login</button>
+        <div class="modal">
+            <form class="modal-content" action="/SOME ACTION">
+                <div id='id1'><span onclick="$('div.modal').hide()" class="close" title="Close Modal">&times;</span></div>
+                <label>Username</label>
+                <input type="text" placeholder="Enter Username" name="uname" required> <br>
+                <label>Password</label>
+                <input type="password"placeholder="Enter Password" name="psw" required> <br>
+                <button type="submit">Login</button>
+                <input type="checkbox" checked="checked"> Remember me 
+            </form>
+        </div>
     </body>
 </html>
