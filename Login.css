@@ -1,5 +1,5 @@
 input[type=text], input[type=password] {
-    width: 70%;
+    width: 40%;
     padding: 12px 20px;
     margin: 8px;
     display: inline-block;
@@ -8,21 +8,23 @@ input[type=text], input[type=password] {
 }
 label {
     display: inline-block;
-    width: 10%;
+    width: 20%;
     text-align: center;
 }
-button {
+button  {
     background-color: #4c87af;
     color: white;
     padding: 12px 12px;
     text-align: center;
     margin: 8px 0;
     border: none;
-    cursor: pointer;
-    
+    cursor: pointer;  
 }
 button:hover {
     opacity: 0.8;
+}
+form div {
+    position: relative;
 }
 .modal {
     display: none;
@@ -40,11 +42,9 @@ button:hover {
     margin: 5% auto 15% auto; 
     padding: 15px;
     border: 1px solid #888;
-    width: 40%; 
+    width: 55%; 
 }
-#id1 {
-    position: relative;
-}
+.error {color: #FF0000;}
 .close {
     position: absolute;
     right: 25px;

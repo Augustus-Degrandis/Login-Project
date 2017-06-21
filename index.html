@@ -5,17 +5,35 @@
         <link rel="stylesheet" href="Login.css">
     </head>
     <body>
-        <button onclick="$('div.modal').show()">Login</button>
-        <div class="modal">
-            <form class="modal-content" action="/SOME ACTION">
-                <div id='id1'><span onclick="$('div.modal').hide()" class="close" title="Close Modal">&times;</span></div>
+        <button onclick="$('#id01').show()">Login</button>
+        <button onclick="$('#id02').show()">Register</button>
+        <div id="id01" class="modal">
+            <form class="modal-content" action="login.php" method='post' accept-charset="UTF-8">
+                <div><span onclick="$('#id01').hide()" class="close" title="Close Modal">&times;</span></div>
                 <label>Username</label>
-                <input type="text" placeholder="Enter Username" name="uname" required> <br>
+                <input type="text" placeholder="Enter Username" name="uname" maxlength="50"> <br>
                 <label>Password</label>
-                <input type="password"placeholder="Enter Password" name="psw" required> <br>
-                <button type="submit">Login</button>
-                <input type="checkbox" checked="checked"> Remember me 
+                <input type="password"placeholder="Enter Password" name="psw"maxlength='50'> <br>
+                <button type ="submit">Login</button>
+                <input type="checkbox" checked="checked"> Remember me
             </form>
+        </div>
+        <div id="id02" class="modal">
+            <div class="modal-content">
+                <p><span class="error">* required field.</span></p>
+                <form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">
+                    <div><span onclick="$('#id02').hide()" class="close" title="Close Modal">&times;</span></div>
+                    <label for='name' >Your Full Name </label>
+                    <input type='text' name='name' id='name' maxlength="50" /><span class="error">* <?php echo $nameErr;?></span><br>
+                    <label for='email' >Email Address</label>
+                    <input type='text' name='email' id='email' maxlength="50" /><span class="error">* <?php echo $emailErr;?></span><br>
+                    <label for='username' >UserName</label>
+                    <input type='text' name='username' id='username' maxlength="50" /><span class="error">* <?php echo $usernameErr;?></span><br>
+                    <label for='password' >Password</label>
+                    <input type='password' name='password' id='password' maxlength="50" /><span class="error">* <?php echo $passwordErr;?></span><br>
+                    <input type='submit' name='Submit' value='Submit' />
+                </form>
+            </div>
         </div>
     </body>
 </html>
